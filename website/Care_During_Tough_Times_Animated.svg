@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900" height="340" viewBox="0 0 900 340"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Care During Tough Times</title>
+  <desc id="desc">Modern church-friendly heading with an animated orange underline beneath Tough Times.</desc>
+
+  <style>
+    .top {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 62px;
+      font-weight: 300;
+      fill: #192330;
+      letter-spacing: -1px;
+    }
+
+    .bottom {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 78px;
+      font-weight: 700;
+      fill: #192330;
+      letter-spacing: -2px;
+    }
+
+    .underline-main {
+      fill: none;
+      stroke: #F39B22;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 610;
+      stroke-dashoffset: 610;
+      animation: draw 3.8s ease-in-out infinite;
+    }
+
+    .underline-detail {
+      fill: none;
+      stroke: #F39B22;
+      stroke-width: 3;
+      stroke-linecap: round;
+      opacity: 0.8;
+      stroke-dasharray: 590;
+      stroke-dashoffset: 590;
+      animation: drawDetail 3.8s ease-in-out infinite;
+    }
+
+    @keyframes draw {
+      0%, 12% { stroke-dashoffset: 610; }
+      42%, 82% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 610; }
+    }
+
+    @keyframes drawDetail {
+      0%, 18% { stroke-dashoffset: 590; opacity: 0; }
+      45%, 82% { stroke-dashoffset: 0; opacity: 0.8; }
+      100% { stroke-dashoffset: 590; opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .underline-main,
+      .underline-detail {
+        animation: none;
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <text x="450" y="115" text-anchor="middle" class="top">Care During</text>
+  <text x="450" y="210" text-anchor="middle" class="bottom">Tough Times</text>
+
+  <path class="underline-main"
+        d="M 205 246
+           C 310 250, 420 248, 520 249
+           C 620 250, 690 247, 705 249" />
+
+  <path class="underline-detail"
+        d="M 218 252
+           C 330 255, 445 253, 555 254
+           C 625 255, 675 251, 708 253" />
+</svg>
