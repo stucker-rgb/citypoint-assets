@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900" height="340" viewBox="0 0 900 340"
+     role="img" aria-labelledby="title desc">
+  <title id="title">It Hurts to Lose Someone</title>
+  <desc id="desc">Modern church-friendly heading with an animated orange underline beneath Someone.</desc>
+
+  <style>
+    .top {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 58px;
+      font-weight: 300;
+      fill: #192330;
+      letter-spacing: -1px;
+    }
+
+    .bottom {
+      font-family: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+      font-size: 86px;
+      font-weight: 700;
+      fill: #192330;
+      letter-spacing: -2px;
+    }
+
+    .underline-main {
+      fill: none;
+      stroke: #F39B22;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 520;
+      stroke-dashoffset: 520;
+      animation: draw 3.8s ease-in-out infinite;
+    }
+
+    .underline-detail {
+      fill: none;
+      stroke: #F39B22;
+      stroke-width: 3;
+      stroke-linecap: round;
+      opacity: 0.8;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: drawDetail 3.8s ease-in-out infinite;
+    }
+
+    @keyframes draw {
+      0%, 12% { stroke-dashoffset: 520; }
+      42%, 82% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 520; }
+    }
+
+    @keyframes drawDetail {
+      0%, 18% { stroke-dashoffset: 500; opacity: 0; }
+      45%, 82% { stroke-dashoffset: 0; opacity: 0.8; }
+      100% { stroke-dashoffset: 500; opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .underline-main,
+      .underline-detail {
+        animation: none;
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <text x="450" y="112" text-anchor="middle" class="top">It Hurts to Lose</text>
+  <text x="450" y="215" text-anchor="middle" class="bottom">Someone</text>
+
+  <path class="underline-main"
+        d="M 238 252
+           C 330 255, 420 252, 510 254
+           C 600 256, 650 252, 662 254" />
+
+  <path class="underline-detail"
+        d="M 248 258
+           C 340 261, 430 258, 520 260
+           C 590 261, 635 257, 665 259" />
+</svg>
